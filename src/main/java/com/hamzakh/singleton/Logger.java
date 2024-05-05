@@ -10,8 +10,7 @@ public class Logger {
     private static Logger logger;
 
     // Private constructor to prevent instantiation of the Logger class from outside the class.
-    private Logger() {
-    }
+    private Logger() {}
 
     /**
      * Method to get the single instance of Logger.
