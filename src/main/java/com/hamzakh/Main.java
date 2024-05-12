@@ -1,7 +1,11 @@
-package com.hamzakh.singleton;
+package com.hamzakh;
+
+
+import com.hamzakh.factorymethod.shapefactory.*;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         System.out.println("Singleton");
 
         NewLazySingleton newLazySingleton = NewLazySingleton.getInstance();
@@ -25,5 +29,20 @@ public class Main {
 
         thread1.start();
         thread2.start();
+        */
+
+        ShapeCreator circleCreator = new CircleCreator();
+        Shape circle = circleCreator.createShape();
+        System.out.println(circle.draw());
+
+        ShapeCreator squareCreator = new SquareCreator();
+        Shape square = squareCreator.createShape();
+        System.out.println(square.draw());
+
+        ShapeCreator rectangleCreator = new RectangleCreator();
+        Shape rectangle = rectangleCreator.createShape();
+        System.out.println(rectangle.draw());
+
+
     }
 }
