@@ -2,7 +2,7 @@
 
 - #### Singleton: Create a Logger class that ensures only one instance of the logger exists.
 
-![img.png](src\main\resources\img\img_1.png)
+![img.png](src/main/resources/img/img_1.png)
 
 ```java
 /**
@@ -33,7 +33,7 @@ public class Logger {
 ```
 - #### Factory Method: Create a ShapeFactory that generates different types of Shape objects (like Circle, Rectangle, Square) based on the input it receives.
 
-![img.png](src\main\resources\img\img.png)
+![img.png](src/main/resources/img/img.png)
 
 ```java
 /**
