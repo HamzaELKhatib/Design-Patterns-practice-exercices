@@ -1,6 +1,9 @@
 ## Creational Patterns:
 
 - #### Singleton: Create a Logger class that ensures only one instance of the logger exists.
+
+![img.png](src\main\resources\img\img_1.png)
+
 ```java
 /**
  * Logger class implementing the Singleton design pattern.
@@ -29,6 +32,116 @@ public class Logger {
 }
 ```
 - #### Factory Method: Create a ShapeFactory that generates different types of Shape objects (like Circle, Rectangle, Square) based on the input it receives.
+
+![img.png](src\main\resources\img\img.png)
+
+```java
+/**
+ * Shape interface that all shapes will implement.
+ */
+public interface Shape {
+    /**
+     * Method to draw the shape.
+     * @return A string describing the drawing action.
+     */
+    String draw();
+}
+
+/**
+ * Circle class that implements the Shape interface.
+ */
+class Circle implements Shape {
+    /**
+     * Method to draw a Circle.
+     * @return A string stating that a Circle is being drawn.
+     */
+    @Override
+    public String draw() {
+        return "Drawing a Circle";
+    }
+}
+
+/**
+ * Square class that implements the Shape interface.
+ */
+class Square implements Shape {
+    /**
+     * Method to draw a Square.
+     * @return A string stating that a Square is being drawn.
+     */
+    @Override
+    public String draw() {
+        return "Drawing a Square";
+    }
+}
+
+/**
+ * Rectangle class that implements the Shape interface.
+ */
+class Rectangle implements Shape {
+    /**
+     * Method to draw a Rectangle.
+     * @return A string stating that a Rectangle is being drawn.
+     */
+    @Override
+    public String draw() {
+        return "Drawing a Rectangle";
+    }
+}
+
+/**
+ * Abstract class ShapeCreator that defines the factory method.
+ */
+public abstract class ShapeCreator {
+    /**
+     * Abstract method to create a Shape.
+     * @return A Shape object.
+     */
+    public abstract Shape createShape();
+}
+
+/**
+ * CircleCreator class that extends ShapeCreator.
+ */
+public class CircleCreator extends ShapeCreator {
+    /**
+     * Method to create a Circle.
+     * @return A Circle object.
+     */
+    @Override
+    public Shape createShape() {
+        return new Circle();
+    }
+}
+
+/**
+ * SquareCreator class that extends ShapeCreator.
+ */
+public class SquareCreator extends ShapeCreator {
+    /**
+     * Method to create a Square.
+     * @return A Square object.
+     */
+    @Override
+    public Shape createShape() {
+        return new Square();
+    }
+}
+
+/**
+ * RectangleCreator class that extends ShapeCreator.
+ */
+public class RectangleCreator extends ShapeCreator {
+    /**
+     * Method to create a Rectangle.
+     * @return A Rectangle object.
+     */
+    @Override
+    public Shape createShape() {
+        return new Rectangle();
+    }
+}
+```
 - #### Abstract Factory: Extend the previous exercise to have an AbstractFactory that produces ShapeFactory and ColorFactory. The ColorFactory should be able to produce different Color objects.
 - #### Builder: Design a PizzaBuilder where you can customize a Pizza object step by step, choosing the type of crust, toppings, size, etc.
 - #### Prototype: Implement a Cell class that can replicate itself.
