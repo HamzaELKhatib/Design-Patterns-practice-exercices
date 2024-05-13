@@ -2,7 +2,7 @@ package com.hamzakh.factorymethod.generalimpl;
 
 public class ConcreteCreatorB extends Creator{
     @Override
-    Product createProduct() {
+    public Product createProduct() {
         return new ConcreteProductB();
     }
 }
