@@ -1,11 +1,7 @@
 package com.hamzakh;
 
 
-import com.hamzakh.factorymethod.generalimpl.ConcreteCreatorA;
-import com.hamzakh.factorymethod.generalimpl.ConcreteCreatorB;
-import com.hamzakh.factorymethod.generalimpl.Creator;
-import com.hamzakh.factorymethod.generalimpl.Product;
-import com.hamzakh.factorymethod.shapefactory.*;
+import com.hamzakh.abstractfactory.abstractshapecolorfactory.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,6 +52,29 @@ public class Main {
         Creator creatorB = new ConcreteCreatorB();
         Product productB = creatorB.createProduct();
         System.out.println(productB.doStuff());*/
+
+
+        AbstractFactory shapeFactory = new ShapeFactory();
+
+        Shape circle = shapeFactory.getShape("CIRCLE");
+        System.out.println(circle.draw());
+
+        Shape square = shapeFactory.getShape("SQUARE");
+        System.out.println(square.draw());
+
+        Shape rectangle = shapeFactory.getShape("RECTANGLE");
+        System.out.println(rectangle.draw());
+
+        AbstractFactory colorFactory = new ColorFactory();
+
+        Color red = colorFactory.getColor("RED");
+        System.out.println(red.fill());
+
+        Color green = colorFactory.getColor("GREEN");
+        System.out.println(green.fill());
+
+        Color blue = colorFactory.getColor("BLUE");
+        System.out.println(blue.fill());
 
     }
 }
