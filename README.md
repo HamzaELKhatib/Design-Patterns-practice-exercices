@@ -143,6 +143,115 @@ public class RectangleCreator extends ShapeCreator {
 }
 ```
 - #### Abstract Factory: Extend the previous exercise to have an AbstractFactory that produces ShapeFactory and ColorFactory. The ColorFactory should be able to produce different Color objects.
+
+![img_2.png](src/main/resources/img/img_2.png)
+
+```java
+// Common interfaces
+public interface Shape {
+    String draw();
+}
+
+public interface Color {
+    String fill();
+}
+
+// Concrete Shape classes
+class Circle implements Shape {
+    @Override
+    public String draw() {
+        return "Drawing a Circle";
+    }
+}
+
+class Square implements Shape {
+    @Override
+    public String draw() {
+        return "Drawing a Square";
+    }
+}
+
+class Rectangle implements Shape {
+    @Override
+    public String draw() {
+        return "Drawing a Rectangle";
+    }
+}
+
+// Concrete Color classes
+class Red implements Color {
+    @Override
+    public String fill() {
+        return "Filling with Red color";
+    }
+}
+
+class Green implements Color {
+    @Override
+    public String fill() {
+        return "Filling with Green color";
+    }
+}
+
+class Blue implements Color {
+    @Override
+    public String fill() {
+        return "Filling with Blue color";
+    }
+}
+
+// Abstract Factory
+abstract class AbstractFactory {
+    abstract Shape getShape(String shapeType);
+    abstract Color getColor(String colorType);
+}
+
+// Concrete Factories
+class ShapeFactory extends AbstractFactory {
+    @Override
+    Shape getShape(String shapeType) {
+        if (shapeType == null) {
+            return null;
+        }
+        if (shapeType.equalsIgnoreCase("CIRCLE")) {
+            return new Circle();
+        } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
+            return new Rectangle();
+        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
+            return new Square();
+        }
+        return null;
+    }
+
+    @Override
+    Color getColor(String colorType) {
+        return null;
+    }
+}
+
+class ColorFactory extends AbstractFactory {
+    @Override
+    Shape getShape(String shapeType) {
+        return null;
+    }
+
+    @Override
+    Color getColor(String colorType) {
+        if (colorType == null) {
+            return null;
+        }
+        if (colorType.equalsIgnoreCase("RED")) {
+            return new Red();
+        } else if (colorType.equalsIgnoreCase("GREEN")) {
+            return new Green();
+        } else if (colorType.equalsIgnoreCase("BLUE")) {
+            return new Blue();
+        }
+        return null;
+    }
+}
+
+```
 - #### Builder: Design a PizzaBuilder where you can customize a Pizza object step by step, choosing the type of crust, toppings, size, etc.
 - #### Prototype: Implement a Cell class that can replicate itself.
 
