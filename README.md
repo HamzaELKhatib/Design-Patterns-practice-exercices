@@ -1,9 +1,11 @@
 ## Creational Patterns:
 
-<details>
-<summary><h4>Singleton: Create a Logger class that ensures only one instance of the logger exists.</h4></summary>
+
+- #### Singleton: Create a Logger class that ensures only one instance of the logger exists.
 
 ![img.png](src/main/resources/img/img_1.png)
+<details>
+<summary align="center"><h4>Solution</h4></summary>
 
 ```java
 /**
