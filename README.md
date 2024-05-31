@@ -1,6 +1,7 @@
 ## Creational Patterns:
 
-- #### Singleton: Create a Logger class that ensures only one instance of the logger exists.
+<details>
+<summary><h4>Singleton: Create a Logger class that ensures only one instance of the logger exists.</h4></summary>
 
 ![img.png](src/main/resources/img/img_1.png)
 
@@ -31,6 +32,8 @@ public class Logger {
     }
 }
 ```
+</details>
+
 - #### Factory Method: Create a ShapeFactory that generates different types of Shape objects (like Circle, Rectangle, Square) based on the input it receives.
 
 ![img.png](src/main/resources/img/img.png)
@@ -142,6 +145,7 @@ public class RectangleCreator extends ShapeCreator {
     }
 }
 ```
+
 - #### Abstract Factory: Extend the previous exercise to have an AbstractFactory that produces ShapeFactory and ColorFactory. The ColorFactory should be able to produce different Color objects.
 
 ![img_2.png](src/main/resources/img/img_2.png)
@@ -203,6 +207,7 @@ class Blue implements Color {
 // Abstract Factory
 abstract class AbstractFactory {
     abstract Shape getShape(String shapeType);
+
     abstract Color getColor(String colorType);
 }
 
@@ -252,6 +257,7 @@ class ColorFactory extends AbstractFactory {
 }
 
 ```
+
 - #### Builder: Design a PizzaBuilder where you can customize a Pizza object step by step, choosing the type of crust, toppings, size, etc.
 - #### Prototype: Implement a Cell class that can replicate itself.
 
