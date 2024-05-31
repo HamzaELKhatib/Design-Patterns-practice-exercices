@@ -39,6 +39,8 @@ public class Logger {
 - #### Factory Method: Create a ShapeFactory that generates different types of Shape objects (like Circle, Rectangle, Square) based on the input it receives.
 
 ![img.png](src/main/resources/img/img.png)
+<details>
+<summary align="center"><h4>Solution</h4></summary>
 
 ```java
 /**
@@ -147,10 +149,13 @@ public class RectangleCreator extends ShapeCreator {
     }
 }
 ```
+</details>
 
 - #### Abstract Factory: Extend the previous exercise to have an AbstractFactory that produces ShapeFactory and ColorFactory. The ColorFactory should be able to produce different Color objects.
 
 ![img_2.png](src/main/resources/img/img_2.png)
+<details>
+<summary align="center"><h4>Solution</h4></summary>
 
 ```java
 // Common interfaces
@@ -259,6 +264,7 @@ class ColorFactory extends AbstractFactory {
 }
 
 ```
+</details>
 
 - #### Builder: Design a PizzaBuilder where you can customize a Pizza object step by step, choosing the type of crust, toppings, size, etc.
 - #### Prototype: Implement a Cell class that can replicate itself.
