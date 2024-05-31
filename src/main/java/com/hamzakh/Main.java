@@ -1,10 +1,10 @@
 package com.hamzakh;
 
 
-import com.hamzakh.abstractfactory.abstractshapecolorfactory.*;
-
 public class Main {
     public static void main(String[] args) {
+
+        // Singleton
         /*
         System.out.println("Singleton");
 
@@ -31,6 +31,7 @@ public class Main {
         thread2.start();
         */
 
+        // Factory Method (Exercice)
         /*
         ShapeCreator circleCreator = new CircleCreator();
         Shape circle = circleCreator.createShape();
@@ -43,17 +44,21 @@ public class Main {
         ShapeCreator rectangleCreator = new RectangleCreator();
         Shape rectangle = rectangleCreator.createShape();
         System.out.println(rectangle.draw());
-*/
+        */
 
-        /*Creator creatorA = new ConcreteCreatorA();
+        // Factory Method
+        /*
+        Creator creatorA = new ConcreteCreatorA();
         Product productA = creatorA.createProduct();
         System.out.println(productA.doStuff());
 
         Creator creatorB = new ConcreteCreatorB();
         Product productB = creatorB.createProduct();
-        System.out.println(productB.doStuff());*/
+        System.out.println(productB.doStuff());
+        */
 
-
+        // Abstract Factory
+        /*
         AbstractFactory shapeFactory = new ShapeFactory();
 
         Shape circle = shapeFactory.getShape("CIRCLE");
@@ -75,6 +80,7 @@ public class Main {
 
         Color blue = colorFactory.getColor("BLUE");
         System.out.println(blue.fill());
+         */
 
     }
 }

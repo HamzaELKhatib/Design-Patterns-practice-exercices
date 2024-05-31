@@ -5,7 +5,7 @@
 
 ![img.png](src/main/resources/img/img_1.png)
 <details>
-<summary align="center" style="color: green"><h4>Solution</h4></summary>
+<summary align="center"><h4>Solution</h4></summary>
 
 ```java
 /**
@@ -40,7 +40,7 @@ public class Logger {
 
 ![img.png](src/main/resources/img/img.png)
 <details>
-<summary align="center" style="color: green"><h4>Solution</h4></summary>
+<summary align="center"><h4>Solution</h4></summary>
 
 ```java
 /**
@@ -155,7 +155,7 @@ public class RectangleCreator extends ShapeCreator {
 
 ![img_2.png](src/main/resources/img/img_2.png)
 <details>
-<summary align="center"><h4 style="color: green">Solution</h4></summary>
+<summary align="center"><h4>Solution</h4></summary>
 
 ```java
 // Common interfaces
