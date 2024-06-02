@@ -1,4 +1,4 @@
-package com.hamzakh.singleton;
+package com.hamzakh.singleton.generalimpl;
 
 /**
  * LazySingleton class implementing the Singleton design pattern with double-checked locking.

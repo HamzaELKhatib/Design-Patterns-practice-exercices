@@ -1,4 +1,4 @@
-package com.hamzakh.factorymethod.shapefactory;
+package com.hamzakh.factorymethod.exercice;
 
 /**
  * Abstract class ShapeCreator that defines the factory method.

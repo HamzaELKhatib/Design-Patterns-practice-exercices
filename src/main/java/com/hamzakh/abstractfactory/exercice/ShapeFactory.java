@@ -1,4 +1,4 @@
-package com.hamzakh.abstractfactory.abstractshapecolorfactory;
+package com.hamzakh.abstractfactory.exercice;
 
 // Concrete Factories
 public class ShapeFactory extends AbstractFactory {
