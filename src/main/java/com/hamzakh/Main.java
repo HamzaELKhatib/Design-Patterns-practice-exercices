@@ -31,7 +31,7 @@ public class Main {
         thread2.start();
         */
 
-        // Factory Method (Exercice)
+        // Factory Method (Exercise)
         /*
         ShapeCreator circleCreator = new CircleCreator();
         Shape circle = circleCreator.createShape();
@@ -57,7 +57,7 @@ public class Main {
         System.out.println(productB.doStuff());
         */
 
-        // Abstract Factory
+        // Abstract Factory (Exercise)
         /*
         AbstractFactory shapeFactory = new ShapeFactory();
 
@@ -81,6 +81,23 @@ public class Main {
         Color blue = colorFactory.getColor("BLUE");
         System.out.println(blue.fill());
          */
+
+        // Abstract Factory
+        /*
+        AbstractFactory factory1 = new ConcreteFactory1();
+        ProductA productA1 = factory1.createProductA();
+        ProductB productB1 = factory1.createProductB();
+
+        productA1.operationA();
+        productB1.operationB();
+
+        AbstractFactory factory2 = new ConcreteFactory2();
+        ProductA productA2 = factory2.createProductA();
+        ProductB productB2 = factory2.createProductB();
+
+        productA2.operationA();
+        productB2.operationB();
+        */
 
     }
 }
