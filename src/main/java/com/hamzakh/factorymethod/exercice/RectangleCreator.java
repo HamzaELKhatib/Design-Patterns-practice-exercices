@@ -1,4 +1,4 @@
-package com.hamzakh.factorymethod.shapefactory;
+package com.hamzakh.factorymethod.exercice;
 
 /**
  * RectangleCreator class that extends ShapeCreator.

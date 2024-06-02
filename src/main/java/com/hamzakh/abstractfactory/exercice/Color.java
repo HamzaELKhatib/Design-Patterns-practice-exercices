@@ -1,4 +1,4 @@
-package com.hamzakh.abstractfactory.abstractshapecolorfactory;
+package com.hamzakh.abstractfactory.exercice;
 
 public interface Color {
 

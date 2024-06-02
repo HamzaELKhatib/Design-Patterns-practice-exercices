@@ -1,4 +1,4 @@
-package com.hamzakh.singleton;
+package com.hamzakh.singleton.generalimpl;
 
 import java.util.concurrent.atomic.AtomicReference;
 
