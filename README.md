@@ -327,18 +327,131 @@ public class Pizza {
 
 - #### Prototype: Implement a Cell class that can replicate itself.
 
+![img_4.png](img_1.png)
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+public interface Cell {
+    Cell copy();
+}
+public class ConcreteCell implements Cell {
+    private final String geneticMaterial;
+    private final int age;
+
+    public ConcreteCell(String geneticMaterial, int age) {
+        this.geneticMaterial = geneticMaterial;
+        this.age = age;
+    }
+
+    public ConcreteCell(ConcreteCell otherCell) {
+        this.geneticMaterial = otherCell.geneticMaterial;
+        this.age = otherCell.age;
+    }
+
+    @Override
+    public ConcreteCell copy() {
+        return new ConcreteCell(this);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        ConcreteCell otherCell = (ConcreteCell) obj;
+        return age == otherCell.age &&
+                Objects.equals(geneticMaterial, otherCell.geneticMaterial);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(geneticMaterial, age);
+    }
+}
+```
+</details>
+
 ## Structural Patterns:
 
 - #### Adapter: Create a MediaPlayer interface and a MediaAdapter class to play different types of audio formats.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Bridge: Design a Shape abstraction and several Shape implementations like Circle, Square. Also create a Color interface and several Color implementations like Red, Blue. The Shape class uses the Color interface to fill itself with color.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Composite: Implement an Employee class, where an employee can have a list of other employees reporting to them.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Decorator: Create a Coffee interface and use decorator pattern to add different types of toppings.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Facade: Create a Computer class that has a start() method, which internally calls methods from CPU, Memory, and HardDrive.
 
 ## Behavioral Patterns:
 
 - #### Observer: Implement a WeatherStation that notifies WeatherDisplay objects whenever it updates its measurements.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### State: Design a TrafficLight that changes its State from Red to Green to Yellow.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Strategy: Implement a ShoppingCart where the payment strategy (CreditCard, Paypal) can be chosen at runtime.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Template Method: Create an Algorithm abstract class with a template method solveProblem(), and let ConcreteAlgorithmA and ConcreteAlgorithmB classes implement this method.
+
+<details>
+<summary align="center"><h4>Solution</h4></summary>
+
+```java
+```
+</details>
+
 - #### Visitor: Implement Book, CD and DVD classes. They can accept a Visitor like ShippingVisitor which calculates the shipping cost for the items.
