@@ -1,6 +1,10 @@
 package com.hamzakh;
 
 
+import com.hamzakh.builder.exercice.Pizza;
+
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -98,6 +102,15 @@ public class Main {
         productA2.operationA();
         productB2.operationB();
         */
+
+        // Builder (Exercise)
+        /*
+        Pizza pizza = new Pizza.PizzaBuilder()
+                .withSize("Large")
+                .withCrust("Thin")
+                .withToppings(List.of("Mushrooms", "Pepperoni", "Mozzarella"))
+                .build();
+         */
 
     }
 }

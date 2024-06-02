@@ -1,4 +1,4 @@
-package com.hamzakh.singleton;
+package com.hamzakh.singleton.exercice;
 
 /**
  * Logger class implementing the Singleton design pattern.
