@@ -2,6 +2,8 @@ package com.hamzakh;
 
 
 import com.hamzakh.builder.exercice.Pizza;
+import com.hamzakh.prototype.Cell;
+import com.hamzakh.prototype.ConcreteCell;
 
 import java.util.List;
 
@@ -110,6 +112,13 @@ public class Main {
                 .withCrust("Thin")
                 .withToppings(List.of("Mushrooms", "Pepperoni", "Mozzarella"))
                 .build();
+         */
+
+        // Prototype (Exercise)
+        /*
+        Cell originalCell = new ConcreteCell("CELL", 10);
+        Cell clonedCell = originalCell.copy();
+        System.out.println(originalCell.equals(clonedCell));
          */
 
     }
