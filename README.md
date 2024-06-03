@@ -420,10 +420,60 @@ public class ConcreteCell implements Cell {
 
 - #### Observer: Implement a WeatherStation that notifies WeatherDisplay objects whenever it updates its measurements.
 
+![img_2.png](img_2.png)
+
 <details>
 <summary align="center"><h4>Solution</h4></summary>
 
 ```java
+public interface WeatherStation {
+    void addObserver(WeatherDisplay observer);
+    void removeObserver(WeatherDisplay observer);
+    void notifyObservers();
+    void setMeasurements(float temperature, float humidity, float pressure); // Added declaration
+}
+
+public class ConcreteWeatherStation implements WeatherStation {
+    private float temperature;
+    private float humidity;
+    private float pressure;
+    private List<WeatherDisplay> observers = new ArrayList<>();
+
+    public void setMeasurements(float temperature, float humidity, float pressure) {
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        notifyObservers();
+    }
+
+    @Override
+    public void addObserver(WeatherDisplay observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(WeatherDisplay observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (WeatherDisplay observer : observers) {
+            observer.update(temperature, humidity, pressure);
+        }
+    }
+}
+
+public interface WeatherDisplay {
+    void update(float temperature, float humidity, float pressure);
+}
+
+public class CurrentConditionsDisplay implements WeatherDisplay {
+    @Override
+    public void update(float temperature, float humidity, float pressure) {
+        System.out.println("Current conditions: " + temperature + "F degrees, " + humidity + "% humidity");
+    }
+}
 ```
 </details>
 
