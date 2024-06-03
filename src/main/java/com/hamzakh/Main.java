@@ -1,12 +1,6 @@
 package com.hamzakh;
 
 
-import com.hamzakh.builder.exercice.Pizza;
-import com.hamzakh.prototype.Cell;
-import com.hamzakh.prototype.ConcreteCell;
-
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -121,5 +115,14 @@ public class Main {
         System.out.println(originalCell.equals(clonedCell));
          */
 
+        // Observer (Exercise)
+        /*
+        WeatherStation weatherStation = new ConcreteWeatherStation();
+        WeatherDisplay currentDisplay = new CurrentConditionsDisplay();
+        weatherStation.addObserver(currentDisplay);
+
+        weatherStation.setMeasurements(80, 65, 30.4f);
+        weatherStation.setMeasurements(82, 70, 29.2f);
+         */
     }
 }
